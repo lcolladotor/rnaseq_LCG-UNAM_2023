@@ -150,8 +150,6 @@ ENSG00000197971
 
 ## Comunidad
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c8ffeFVUzk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 Autores de `iSEE`:
 
 * https://twitter.com/KevinRUE67
