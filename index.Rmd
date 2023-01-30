@@ -1,11 +1,11 @@
 ---
-title: "Intro RNA-seq LCG-UNAM 2022"
+title: "Intro RNA-seq LCG-UNAM 2023"
 author: "Leonardo Collado-Torres"
 site: bookdown::bookdown_site
 apple-touch-sin: "icon_192.png"
 apple-touch-icon-size: 192
 favicon: "icon_32.png"
-github-repo: "lcolladotor/rnaseq_LCG-UNAM_2022"
+github-repo: "lcolladotor/rnaseq_LCG-UNAM_2023"
 documentclass: book
 output:
   bookdown::gitbook:
@@ -17,7 +17,7 @@ output:
 
 # Overview {-}
 
-Here you can find the files for the February 2022 introduction to R, RStudio and RNA-sequencing (RNA-seq) course for [LCG-UNAM](https://lcg.unam.mx/) at [CCG-UNAM](https://ccg.unam.mx/) (February 1-4, 2021). The rest of the chapters will be in Spanish.
+Here you can find the files for the February 2023 introduction to R, RStudio and RNA-sequencing (RNA-seq) course for [LCG-UNAM](https://lcg.unam.mx/) at [CCG-UNAM](https://ccg.unam.mx/) (January 31 - February 3, 2023). The rest of the chapters will be in Spanish.
 
 Instructor:
 
@@ -25,20 +25,22 @@ Instructor:
 
 Teach assistants:
 
-* [Elisa Márquez Zavala](https://github.com/emarquezz)
 * [Valeria Erendira Mateo Estrada](https://github.com/valeriamateo)
 
+Guest presenters:
+
+* [Daianna González Padilla](https://daianna21.github.io/), [Twitter](https://twitter.com/Daianna27635327/)
 
 Course Coordinators:
 
 * Heladia Salgado
 * Julio Collado Vides
 
-Download the materials for this course with `usethis::use_course('lcolladotor/rnaseq_LCG-UNAM_2022')` or view online at [**lcolladotor.github.io/rnaseq_LCG-UNAM_2022**](http://lcolladotor.github.io/rnaseq_LCG-UNAM_2022).
+Download the materials for this course with `usethis::use_course('lcolladotor/rnaseq_LCG-UNAM_2023')` or view online at [**lcolladotor.github.io/rnaseq_LCG-UNAM_2023**](http://lcolladotor.github.io/rnaseq_LCG-UNAM_2023).
 
 ## Code of Conduct {-}
 
-We'll follow the CDSB code of conduct [comunidadbioinfo.github.io/codigo-de-conducta/](https://comunidadbioinfo.github.io/codigo-de-conducta/) as well as version 1.0.1 of the Bioconductor code of conduct [bioconductor.github.io/bioc_coc_multilingual/](https://bioconductor.github.io/bioc_coc_multilingual/). 
+We'll follow the CDSB code of conduct [comunidadbioinfo.github.io/codigo-de-conducta/](https://comunidadbioinfo.github.io/codigo-de-conducta/) as well as version 1.2.0 of the Bioconductor code of conduct [bioconductor.github.io/bioc_coc_multilingual/](https://bioconductor.github.io/bioc_coc_multilingual/). 
 
 For reporting any violations of the code of conduct, report them to the Instructor and/or Course Coordinators.
 
@@ -46,32 +48,34 @@ For reporting any violations of the code of conduct, report them to the Instruct
 
 _Local times in Cuernavaca, Mexico_
 
-* Tuesday February 1:
+* Tuesday January 31:
   - 9-11 am: introduction to R, RStudio, `r BiocStyle::CRANpkg("usethis")` and `r BiocStyle::CRANpkg("here")`
   - 12-2 pm: introduction to Bioconductor
-* Wednesday February 2:
+* Wednesday February 1:
   - 9-11 am: expression data R/Bioconductor objects and visualization: `r BiocStyle::Biocpkg("SummarizedExperiment")` and `r BiocStyle::Biocpkg("iSEE")`
   - 12-2 pm: Downloading RNA-seq data using `r BiocStyle::Biocpkg("recount3")`
-* Thursday February 3:
+* Thursday February 2:
   - 9-11 am: statistical models with `r BiocStyle::Biocpkg("ExploreModelMatrix")`
   - 12-2 pm: differential expression analysis with `r BiocStyle::Biocpkg("limma")`
-* Friday February 4:
+* Friday February 3:
   - 9-12 am: Review session + spatial transcriptomics with `r BiocStyle::Biocpkg("spatialLIBD")`
   - 1-2 pm: open discussion (career paths, networking, etc)
   
 ## External links {-}
 
 * [Cursos LCG](https://cursos.lcg.unam.mx/course/view.php?id=123)
-* [GitHub source code](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022)
+* [GitHub source code](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023)
 * Zoom (ask)
 * [LCG-UNAM RStudio server](http://132.248.220.108:8787/)
 * [CDSB](https://comunidadbioinfo.github.io/). 
-* [Slack CDSB Mexico](https://comunidadbioinfo.slack.com), in particular the [`intro_rnaseq_lcg_2022` channel](https://comunidadbioinfo.slack.com/archives/C031BNT0VUH). You can join this Slack workspace through [this link](https://join.slack.com/t/comunidadbioinfo/shared_invite/zt-8lsvpm84-Fne1W0hadk6cpjgJS17Tnw).
+* [Slack CDSB Mexico](https://comunidadbioinfo.slack.com), in particular the [`intro_rnaseq_lcg_2023` channel](https://comunidadbioinfo.slack.com/archives/C04LYBTLC22). You can join this Slack workspace through [this link](https://join.slack.com/t/comunidadbioinfo/shared_invite/zt-8lsvpm84-Fne1W0hadk6cpjgJS17Tnw).
+* [LieberInstitute/template_project](https://github.com/LieberInstitute/template_project)
+* Example real project (by Daianna): [LieberInstitute/smokingMouse_Indirects](https://github.com/LieberInstitute/smokingMouse_Indirects)
   
 
 ## Course Prerequisites {-}
 
-Install R 4.1.x from [CRAN](https://cran.r-project.org/) then install the following R packages:
+Install R 4.2.x from [CRAN](https://cran.r-project.org/) then install the following R packages:
 
 ```{r install, eval = FALSE}
 ## For installing Bioconductor packages
@@ -103,7 +107,7 @@ BiocManager::install(
 )
 ```
 
-You will also need to install [RStudio](https://rstudio.com/products/rstudio/download/#download) version 2021.09 or newer.
+You will also need to install [RStudio](https://rstudio.com/products/rstudio/download/#download) version 2022.12.0+353 or newer.
 
 ## Course Evaluation {-}
 
@@ -121,11 +125,11 @@ You will also need to install [RStudio](https://rstudio.com/products/rstudio/dow
   
 The final grade will be a weighted average from the evaluation by each TA (15% each), your public work (30%) and your final project (40%).
 
-Projects, public work and notes are due at 9 am US Eastern on Monday February 14th, though we recommend doing any work related to this course by Friday February 11th.
+Projects, public work and notes are due at 9 am US Eastern on Monday February 13th, though we recommend doing any work related to this course by Friday February 10th.
 
 ## R session information {-}
 
-Details on the R version used for making this book. The source code is available at [`lcolladotor/rnaseq_LCG-UNAM_2022`](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022).
+Details on the R version used for making this book. The source code is available at [`lcolladotor/rnaseq_LCG-UNAM_2023`](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023).
 
 ```{r session_packages, eval = TRUE, message = FALSE}
 ## Load the package at the top of your script

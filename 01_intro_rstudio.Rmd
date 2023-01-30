@@ -137,7 +137,7 @@ sessioninfo::session_info()
 
 También hay videos en el [canal de YouTube de la CDSB](https://www.youtube.com/channel/UCHCdYfAXVzJIUkMoMSGiZMw) sobre `here` como pueden ver [aquí](https://www.youtube.com/channel/UCHCdYfAXVzJIUkMoMSGiZMw/search?query=here).
 
-* Para una guía más detallada de cómo organizar tus archivos, revisa https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#.YflDV-rMJD8. 
+* Para una guía más detallada de cómo organizar tus archivos, revisa https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#.YflDV-rMJD8. En particular, [LieberInstitute/template_project](https://github.com/LieberInstitute/template_project).
 
 * Configura `usethis` con GitHub vía https://usethis.r-lib.org/articles/articles/git-credentials.html
 

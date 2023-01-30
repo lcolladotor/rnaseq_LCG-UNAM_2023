@@ -137,7 +137,7 @@ Explorando la posibilidad de hacer análisis con `recount3` (enero 2022):
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I have found a novel exon expressed in a cancer sample. I would like to search TCGA/SRA to identify other samples with the same/similar exon. It will be rare. Can I use Recount3, megadepth for this? <a href="https://twitter.com/jtleek?ref_src=twsrc%5Etfw">@jtleek</a> <a href="https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw">@lcolladotor</a> <a href="https://twitter.com/BenLangmead?ref_src=twsrc%5Etfw">@BenLangmead</a></p>&mdash; Alicia Oshlack (@AliciaOshlack) <a href="https://twitter.com/AliciaOshlack/status/1478518895166119937?ref_src=twsrc%5Etfw">January 5, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Un tweet de ayer (febrero 1, 2022):
+Un tweet del curso del año pasado (febrero 1, 2022):
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thinking on this a bit it is strange how few people are doing “medium-sized” meta analyses of transcriptiomics. One on end you have <a href="https://twitter.com/BenLangmead?ref_src=twsrc%5Etfw">@BenLangmead</a> <a href="https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw">@lcolladotor</a> reprocessing (with a touch of analysis) most of SRA. And you see papers pulling an dataset or two to corroborate.</p>&mdash; David McGaughey (@David_McGaughey) <a href="https://twitter.com/David_McGaughey/status/1488596806313431044?ref_src=twsrc%5Etfw">February 1, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
