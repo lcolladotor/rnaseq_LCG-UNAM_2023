@@ -123,7 +123,7 @@ You will also need to install [RStudio](https://rstudio.com/products/rstudio/dow
 * Final project
   - (main evidence) code in a public GitHub repository (different from the notes one) following the structure from [LieberInstitute/template_project](https://github.com/LieberInstitute/template_project)
   - (optional) a rendered Rmd file (RPubs, GitHub, etc) on a public URL
-  - (optional advanced) Copy this repository, remove all the Rmds except the index.Rmd and edit accordingly. GitHub Actions will then help you render it. You'll need to fetch the `gh-pages` branch and at least make one commit for the HTML to be available such as this [commit](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2021/commit/e15bd6c234dd0ca4233050a4a0a42184994fef3b).
+  - (optional advanced) Copy this repository, remove all the Rmds except the index.Rmd and edit accordingly. GitHub Actions will then help you render it. You'll need to fetch the `gh-pages` branch and at least make one commit for the HTML to be available such as this [commit](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2021/commit/e15bd6c234dd0ca4233050a4a0a42184994fef3b). You might also run into [this GitHub default permission setting](https://github.com/ad-m/github-push-action/issues/96#issuecomment-1396347833) that you'll need to change.
   
 The final grade will be a weighted average from the evaluation by the TA (20%), your public work (40%) and your final project (40%).
 
