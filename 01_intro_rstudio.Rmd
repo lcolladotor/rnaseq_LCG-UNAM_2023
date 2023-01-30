@@ -31,7 +31,7 @@
   - https://github.com/ComunidadBioInfo/cdsb2020/blob/master/presentaciones_flujos-de-trabajo/Introduccion-al-flujo-de-trabajo-orientado-a-proyectos.pdf
 * Puedes tener páginas web estáticas
   - https://pages.github.com/
-  - https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022. En especial https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022/tree/gh-pages se convierte en http://lcolladotor.github.io/rnaseq_LCG-UNAM_2022/
+  - https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023. En especial https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023/tree/gh-pages se convierte en http://lcolladotor.github.io/rnaseq_LCG-UNAM_2023/
   - Página personal: https://github.com/lcolladotor/lcolladotor.github.com se convierte en http://lcolladotor.github.io/. Está todo hecho con https://github.com/lcolladotor/lcolladotorsource
 * Tip: usen el mismo nombre de usuario en GitHub, Twitter, Gmail, etc. 
   - How to be a Modern Scientist: https://lcolladotor.github.io/bioc_team_ds/how-to-be-a-modern-scientist.html
@@ -85,7 +85,7 @@ options(repos = c(CRAN = "https://cloud.r-project.org"))
 
 
 ```{r proj, eval = FALSE}
-usethis::create_project("~/rnaseq_2022_notas")
+usethis::create_project("~/rnaseq_2023_notas")
 ```
 
 ```{r create_setup, eval = FALSE}
@@ -196,23 +196,23 @@ usethis::use_git()
 usethis::use_github()
 ```
 
-Resultado ejemplo: https://github.com/lcolladotor/rnaseq_2021_notas. El que hice en vivo está disponible vía https://github.com/lcolladotor/rnaseq_2022_notas_en_vivo.
+Resultado ejemplo: https://github.com/lcolladotor/rnaseq_2021_notas. El que hice en vivo está disponible vía https://github.com/lcolladotor/rnaseq_2023_notas_en_vivo.
 
 Una vez que termines, agrega la liga al repositorio con tus notas del curso en el [la página del curso](https://cursos.lcg.unam.mx/course/view.php?id=123#section-3).
 
 ## Material del curso
 
-* Pueden descargar la versión estática con `usethis::use_course('lcolladotor/rnaseq_LCG-UNAM_2022')`
-* Pueden verlo en línea a través de  [**lcolladotor.github.io/rnaseq_LCG-UNAM_2022**](http://lcolladotor.github.io/rnaseq_LCG-UNAM_2022)
+* Pueden descargar la versión estática con `usethis::use_course('lcolladotor/rnaseq_LCG-UNAM_2023')`
+* Pueden verlo en línea a través de  [**lcolladotor.github.io/rnaseq_LCG-UNAM_2023**](http://lcolladotor.github.io/rnaseq_LCG-UNAM_2023)
 * Pueden **clonarlo** desde GitHub de tal forma que podrán actualizarlo fácilmente usando *git pull*
 
 ```{bash clone_course, eval = FALSE}
-git clone https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022.git
+git clone https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023.git
 
 ## Si tienen su SSH key configurarda pueden usar
 ## Info sobre SSH keys de GitHub: 
 ## https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-git clone git@github.com:lcolladotor/rnaseq_LCG-UNAM_2022.git
+git clone git@github.com:lcolladotor/rnaseq_LCG-UNAM_2023.git
 ```
 
 O desde R con:
@@ -221,15 +221,15 @@ O desde R con:
 ## Opción más nueva:
 library("gert")
 repo <- git_clone(
-    "https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022",
-    "~/rnaseq_LCG-UNAM_2022"
+    "https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023",
+    "~/rnaseq_LCG-UNAM_2023"
 )
 setwd(repo)
 
 ## Otra opción:
 git2r::clone(
-    "https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022",
-    "~/rnaseq_LCG-UNAM_2022"
+    "https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023",
+    "~/rnaseq_LCG-UNAM_2023"
 )
 ```
 
@@ -251,6 +251,7 @@ git2r::clone(
   - https://hadley.nz/ vía https://github.com/hadley/hadley.github.com
   - https://emarquezz.github.io/ vía https://github.com/emarquezz/emarquezz.github.io
   - https://bpardo99.github.io/ vía https://github.com/bpardo99/bpardo99.github.io
+  - https://daianna21.github.io/ vía https://github.com/daianna21/daianna21.github.io.
 
 
 ```{r postcards_proj, eval = FALSE}
@@ -276,7 +277,7 @@ postcards::create_postcard(template = "onofre")
 * Agreguen sus perfiles estilo https://github.com/andrewejaffe/andrewejaffe.github.io/blob/master/index.Rmd#L7-L12
 * Den click en el botón azul de `knit` en RStudio. Es equivalente a `rmarkdown::render("index.Rmd")`. Esto creará el archivo `index.html`.
 * Hagan un `commit` para guardar los archivos nuevos incluyendo `index.html` y luego un `push` para subir los archivos a GitHub.
-* Comparte tu repositorio vía el Slack de la CDSB en el canal [`intro_rnaseq_lcg_2022`](https://comunidadbioinfo.slack.com/archives/C031BNT0VUH).
+* Comparte tu repositorio vía el Slack de la CDSB en el canal [`intro_rnaseq_lcg_2023`](https://comunidadbioinfo.slack.com/archives/C04LYBTLC22).
 * (opcional) Anuncien su nueva página web en Twitter usando el hashtag `#rstats` y/o etiquen al autor de `postcards` https://twitter.com/seankross. Pueden después incluir su página web en su introducción en el canal `#bienvenida` del Slack de la CDSB ^^ al cual pueden unirse a través de  [esta liga](https://join.slack.com/t/comunidadbioinfo/shared_invite/zt-8lsvpm84-Fne1W0hadk6cpjgJS17Tnw).
 
 

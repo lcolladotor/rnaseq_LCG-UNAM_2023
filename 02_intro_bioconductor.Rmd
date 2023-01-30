@@ -36,7 +36,7 @@ Bioconductor, the R package repository for the “analysis and comprehension of 
     - Son 4 árboles principales: software, annotation, experiment, workflow
     - Dentro de cada árbol, un paquete puede ser parte de varias ramas
     - Tiene una búsqueda de texto simple
-    - Ejemplo: Software → WorkflowStep → Visualization → http://bioconductor.org/packages/release/BiocViews.html#___Visualization (486 paquetes en BioC 3.11 abril-octubre 2020, 506 en BioC 3.12 octubre 2020-abril 2021, 536 en BioC 3.14 octubre 2021-abril 2022)
+    - Ejemplo: Software → WorkflowStep → Visualization → http://bioconductor.org/packages/release/BiocViews.html#___Visualization (486 paquetes en BioC 3.11 abril-octubre 2020, 506 en BioC 3.12 octubre 2020-abril 2021, 536 en BioC 3.14 octubre 2021-abril 2022, 542 en BioC 3.16 octubre 2022-abril 2023)
 
 
 ## Estructura de un paquete de BioC
