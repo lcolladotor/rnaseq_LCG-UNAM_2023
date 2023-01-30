@@ -65,7 +65,7 @@ _Local times in Cuernavaca, Mexico_
   
 ## External links {-}
 
-* [Cursos LCG](https://cursos.lcg.unam.mx/course/view.php?id=123)
+* [Cursos LCG](https://cursos.lcg.unam.mx/course/view.php?id=161)
 * [GitHub source code](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023)
 * Zoom (ask)
 * [LCG-UNAM RStudio server](http://132.248.220.108:8787/)
