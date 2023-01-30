@@ -56,7 +56,7 @@ _Local times in Cuernavaca, Mexico_
   - 12-2 pm: Downloading RNA-seq data using `r BiocStyle::Biocpkg("recount3")`
 * Thursday February 2:
   - 9-11 am: statistical models with `r BiocStyle::Biocpkg("ExploreModelMatrix")`
-  - 12-2 pm: differential expression analysis with `r BiocStyle::Biocpkg("limma")`
+  - 11 am-12 pm + 1-2 pm: differential expression analysis with `r BiocStyle::Biocpkg("limma")`
 * Friday February 3:
   - 9-11 am: [LieberInstitute/smokingMouse_Indirects](https://github.com/LieberInstitute/smokingMouse_Indirects) results + code by [Daianna González Padilla](https://daianna21.github.io/). Looking beyond this course!
   - 12-2 pm: review + _R/Bioconductor-powered Team Data Science_ overview
