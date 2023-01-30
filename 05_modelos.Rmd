@@ -395,7 +395,8 @@ dev.off()
 
 * Con datos de algún estudio disponible vía `recount3`, hagan un análisis de expresión diferencial.
 * Incluyan al menos 3 gráficas en su reporte.
-* Su reporte debe ser público y estar listado en [la página del curso](https://cursos.lcg.unam.mx/course/view.php?id=123#section-3).
+* Incluyan al menos un párrafo de interpretación biológica de los resultados.
+* Su reporte debe ser público y estar listado en [la página del curso](https://cursos.lcg.unam.mx/course/view.php?id=161#section-3).
 
 Suena fácil, pero cada estudio tiene sus complejidades.
 
