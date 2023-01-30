@@ -1,0 +1,175 @@
+---
+title: "Intro RNA-seq LCG-UNAM 2022"
+author: "Leonardo Collado-Torres"
+site: bookdown::bookdown_site
+apple-touch-sin: "icon_192.png"
+apple-touch-icon-size: 192
+favicon: "icon_32.png"
+github-repo: "lcolladotor/rnaseq_LCG-UNAM_2022"
+documentclass: book
+output:
+  bookdown::gitbook:
+    includes:
+      after_body: map_and_ga.html
+    css: "style.css"
+    
+---
+
+# Overview {-}
+
+Here you can find the files for the February 2022 introduction to R, RStudio and RNA-sequencing (RNA-seq) course for [LCG-UNAM](https://lcg.unam.mx/) at [CCG-UNAM](https://ccg.unam.mx/) (February 1-4, 2021). The rest of the chapters will be in Spanish.
+
+Instructor:
+
+* [**Leonardo Collado-Torres**](http://lcolladotor.github.io/): [team website](https://lcolladotor.github.io/bioc_team_ds/), [Twitter](https://twitter.com/lcolladotor)
+
+Teach assistants:
+
+* [Elisa Márquez Zavala](https://github.com/emarquezz)
+* [Valeria Erendira Mateo Estrada](https://github.com/valeriamateo)
+
+
+Course Coordinators:
+
+* Heladia Salgado
+* Julio Collado Vides
+
+Download the materials for this course with `usethis::use_course('lcolladotor/rnaseq_LCG-UNAM_2022')` or view online at [**lcolladotor.github.io/rnaseq_LCG-UNAM_2022**](http://lcolladotor.github.io/rnaseq_LCG-UNAM_2022).
+
+## Code of Conduct {-}
+
+We'll follow the CDSB code of conduct [comunidadbioinfo.github.io/codigo-de-conducta/](https://comunidadbioinfo.github.io/codigo-de-conducta/) as well as version 1.0.1 of the Bioconductor code of conduct [bioconductor.github.io/bioc_coc_multilingual/](https://bioconductor.github.io/bioc_coc_multilingual/). 
+
+For reporting any violations of the code of conduct, report them to the Instructor and/or Course Coordinators.
+
+## Course Schedule {-}
+
+_Local times in Cuernavaca, Mexico_
+
+* Tuesday February 1:
+  - 9-11 am: introduction to R, RStudio, `r BiocStyle::CRANpkg("usethis")` and `r BiocStyle::CRANpkg("here")`
+  - 12-2 pm: introduction to Bioconductor
+* Wednesday February 2:
+  - 9-11 am: expression data R/Bioconductor objects and visualization: `r BiocStyle::Biocpkg("SummarizedExperiment")` and `r BiocStyle::Biocpkg("iSEE")`
+  - 12-2 pm: Downloading RNA-seq data using `r BiocStyle::Biocpkg("recount3")`
+* Thursday February 3:
+  - 9-11 am: statistical models with `r BiocStyle::Biocpkg("ExploreModelMatrix")`
+  - 12-2 pm: differential expression analysis with `r BiocStyle::Biocpkg("limma")`
+* Friday February 4:
+  - 9-12 am: Review session + spatial transcriptomics with `r BiocStyle::Biocpkg("spatialLIBD")`
+  - 1-2 pm: open discussion (career paths, networking, etc)
+  
+## External links {-}
+
+* [Cursos LCG](https://cursos.lcg.unam.mx/course/view.php?id=123)
+* [GitHub source code](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022)
+* Zoom (ask)
+* [LCG-UNAM RStudio server](http://132.248.220.108:8787/)
+* [CDSB](https://comunidadbioinfo.github.io/). 
+* [Slack CDSB Mexico](https://comunidadbioinfo.slack.com), in particular the [`intro_rnaseq_lcg_2022` channel](https://comunidadbioinfo.slack.com/archives/C031BNT0VUH). You can join this Slack workspace through [this link](https://join.slack.com/t/comunidadbioinfo/shared_invite/zt-8lsvpm84-Fne1W0hadk6cpjgJS17Tnw).
+  
+
+## Course Prerequisites {-}
+
+Install R 4.1.x from [CRAN](https://cran.r-project.org/) then install the following R packages:
+
+```{r install, eval = FALSE}
+## For installing Bioconductor packages
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+}
+
+## Install required packages
+BiocManager::install(
+    c(
+        "usethis", ## Utilities
+        "here",
+        "biocthis",
+        "lobstr",
+        "postcards",
+        "sessioninfo",
+        "SummarizedExperiment", ## Main containers / vis
+        "iSEE",
+        "edgeR", ## RNA-seq
+        "ExploreModelMatrix",
+        "limma",
+        "recount3",
+        "pheatmap", ## Visualization
+        "ggplot2",
+        "patchwork",
+        "RColorBrewer",
+        "spatialLIBD" ## Advanced
+    )
+)
+```
+
+You will also need to install [RStudio](https://rstudio.com/products/rstudio/download/#download) version 2021.09 or newer.
+
+## Course Evaluation {-}
+
+* Participation
+  - (main evidence) written and/or verbal participation during sessions and break-out rooms
+  - (optional, strongly encouraged for your own career) Community building: CDSB Slack (introduce yourself), twitter, GitHub, etc.
+* Public work
+  - (main evidence) Taking notes on GitHub
+  - (optional) Deploy an iSEE `shiny` app on shinyapps.io
+  - (advanced and optional) R package with notes following `usethis::create_package()` + `biocthis::use_bioc_pkg_templates()`.
+* Final project
+  - (main evidence) code in a public URL (gist, GitHub, ...)
+  - (optional) a rendered Rmd file (RPubs, GitHub)
+  - (optional advanced) Copy this repository, remove all the Rmds except the index.Rmd and edit accordingly. GitHub Actions will then help you render it. You'll need to fetch the `gh-pages` branch and at least make one commit for the HTML to be available such as this [commit](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2021/commit/e15bd6c234dd0ca4233050a4a0a42184994fef3b).
+  
+The final grade will be a weighted average from the evaluation by each TA (15% each), your public work (30%) and your final project (40%).
+
+Projects, public work and notes are due at 9 am US Eastern on Monday February 14th, though we recommend doing any work related to this course by Friday February 11th.
+
+## R session information {-}
+
+Details on the R version used for making this book. The source code is available at [`lcolladotor/rnaseq_LCG-UNAM_2022`](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2022).
+
+```{r session_packages, eval = TRUE, message = FALSE}
+## Load the package at the top of your script
+library("sessioninfo")
+
+##  Utilities
+library("BiocStyle")
+library("biocthis")
+library("here")
+library("lobstr")
+library("postcards")
+library("usethis")
+library("sessioninfo")
+
+## Main containers / vis
+library("SummarizedExperiment")
+library("iSEE")
+
+## RNA-seq
+library("edgeR")
+library("ExploreModelMatrix")
+library("limma")
+library("recount3")
+
+## Visualization
+library("ggplot2")
+library("patchwork")
+library("pheatmap")
+library("RColorBrewer")
+
+## Advanced
+library("spatialLIBD")
+```
+
+```{r session_info}
+## Reproducibility information
+options(width = 120)
+session_info()
+proc.time()
+```
+
+This book was last updated at `r Sys.time()`.
+
+## License  {-}
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
