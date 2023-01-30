@@ -114,10 +114,10 @@ You will also need to install [RStudio](https://rstudio.com/products/rstudio/dow
 ## Course Evaluation {-}
 
 * Participation
-  - (main evidence) written and/or verbal participation during sessions and break-out rooms
-  - (optional, strongly encouraged for your own career) Community building: CDSB Slack (introduce yourself), twitter, GitHub, etc.
+  - (main evidence) written and/or verbal participation during class
+  - (optional, strongly encouraged for your own career) Community building: CDSB Slack (introduce yourself), Twitter, GitHub, etc.
 * Public work
-  - (main evidence) Taking notes on GitHub
+  - (main evidence) Taking notes on GitHub following the structure from [LieberInstitute/template_project](https://github.com/LieberInstitute/template_project)
   - (optional) Deploy an iSEE `shiny` app on shinyapps.io
   - (advanced and optional) R package with notes following `usethis::create_package()` + `biocthis::use_bioc_pkg_templates()`.
 * Final project
@@ -125,7 +125,7 @@ You will also need to install [RStudio](https://rstudio.com/products/rstudio/dow
   - (optional) a rendered Rmd file (RPubs, GitHub)
   - (optional advanced) Copy this repository, remove all the Rmds except the index.Rmd and edit accordingly. GitHub Actions will then help you render it. You'll need to fetch the `gh-pages` branch and at least make one commit for the HTML to be available such as this [commit](https://github.com/lcolladotor/rnaseq_LCG-UNAM_2021/commit/e15bd6c234dd0ca4233050a4a0a42184994fef3b).
   
-The final grade will be a weighted average from the evaluation by each TA (15% each), your public work (30%) and your final project (40%).
+The final grade will be a weighted average from the evaluation by the TA (20%), your public work (40%) and your final project (40%).
 
 Projects, public work and notes are due at 9 am US Eastern on Monday February 13th, though we recommend doing any work related to this course by Friday February 10th.
 
