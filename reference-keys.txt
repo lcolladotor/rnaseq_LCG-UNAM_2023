@@ -37,6 +37,7 @@ visualizando-genes-de
 ejercicio-3
 comunidad-3
 ejercicio-respuesta
+sobre-centering-y-scaling-en-heatmaps
 específicaciones-del-proyecto
 smokingmouse
 revisión
