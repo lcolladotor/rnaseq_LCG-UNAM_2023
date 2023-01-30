@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Intro RNA-seq LCG-UNAM 2023</title>
+  <meta name="description" content="Intro RNA-seq LCG-UNAM 2023" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Intro RNA-seq LCG-UNAM 2023" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="lcolladotor/rnaseq_LCG-UNAM_2023" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Intro RNA-seq LCG-UNAM 2023" />
+  
+  
+  
+
+<meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="icon_32.png" type="image/x-icon" />
+
+<link rel="next" href="introducción-a-r-y-rstudio.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i>Code of Conduct</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-schedule"><i class="fa fa-check"></i>Course Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#external-links"><i class="fa fa-check"></i>External links</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-prerequisites"><i class="fa fa-check"></i>Course Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-evaluation"><i class="fa fa-check"></i>Course Evaluation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html"><i class="fa fa-check"></i><b>1</b> Introducción a R y RStudio</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#r"><i class="fa fa-check"></i><b>1.1</b> R</a></li>
+<li class="chapter" data-level="1.2" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#github"><i class="fa fa-check"></i><b>1.2</b> GitHub</a></li>
+<li class="chapter" data-level="1.3" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#rstudio"><i class="fa fa-check"></i><b>1.3</b> RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#material-del-curso"><i class="fa fa-check"></i><b>1.4</b> Material del curso</a></li>
+<li class="chapter" data-level="1.5" data-path="introducción-a-r-y-rstudio.html"><a href="introducción-a-r-y-rstudio.html#actividad-postcards-opcional"><i class="fa fa-check"></i><b>1.5</b> Actividad postcards (opcional)</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introducción-a-bioconductor.html"><a href="introducción-a-bioconductor.html"><i class="fa fa-check"></i><b>2</b> Introducción a Bioconductor</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introducción-a-bioconductor.html"><a href="introducción-a-bioconductor.html#encontrando-paquetes-de-bioconductor"><i class="fa fa-check"></i><b>2.1</b> Encontrando paquetes de Bioconductor</a></li>
+<li class="chapter" data-level="2.2" data-path="introducción-a-bioconductor.html"><a href="introducción-a-bioconductor.html#estructura-de-un-paquete-de-bioc"><i class="fa fa-check"></i><b>2.2</b> Estructura de un paquete de BioC</a></li>
+<li class="chapter" data-level="2.3" data-path="introducción-a-bioconductor.html"><a href="introducción-a-bioconductor.html#las-dos-ramas-de-bioconductor-release-y-devel"><i class="fa fa-check"></i><b>2.3</b> Las dos ramas de Bioconductor: release y devel</a></li>
+<li class="chapter" data-level="2.4" data-path="introducción-a-bioconductor.html"><a href="introducción-a-bioconductor.html#cursos-y-eventos"><i class="fa fa-check"></i><b>2.4</b> Cursos y eventos</a></li>
+<li class="chapter" data-level="2.5" data-path="introducción-a-bioconductor.html"><a href="introducción-a-bioconductor.html#comunidad"><i class="fa fa-check"></i><b>2.5</b> Comunidad</a></li>
+<li class="chapter" data-level="2.6" data-path="introducción-a-bioconductor.html"><a href="introducción-a-bioconductor.html#ejercicio-grupal"><i class="fa fa-check"></i><b>2.6</b> Ejercicio grupal</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="objetos-de-bioconductor-para-datos-de-expresión.html"><a href="objetos-de-bioconductor-para-datos-de-expresión.html"><i class="fa fa-check"></i><b>3</b> Objetos de Bioconductor para datos de expresión</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="objetos-de-bioconductor-para-datos-de-expresión.html"><a href="objetos-de-bioconductor-para-datos-de-expresión.html#summarizedexperiment"><i class="fa fa-check"></i><b>3.1</b> SummarizedExperiment</a></li>
+<li class="chapter" data-level="3.2" data-path="objetos-de-bioconductor-para-datos-de-expresión.html"><a href="objetos-de-bioconductor-para-datos-de-expresión.html#ejercicio"><i class="fa fa-check"></i><b>3.2</b> Ejercicio</a></li>
+<li class="chapter" data-level="3.3" data-path="objetos-de-bioconductor-para-datos-de-expresión.html"><a href="objetos-de-bioconductor-para-datos-de-expresión.html#isee"><i class="fa fa-check"></i><b>3.3</b> iSEE</a></li>
+<li class="chapter" data-level="3.4" data-path="objetos-de-bioconductor-para-datos-de-expresión.html"><a href="objetos-de-bioconductor-para-datos-de-expresión.html#ejercicio-con-spatiallibd"><i class="fa fa-check"></i><b>3.4</b> Ejercicio con spatialLIBD</a></li>
+<li class="chapter" data-level="3.5" data-path="objetos-de-bioconductor-para-datos-de-expresión.html"><a href="objetos-de-bioconductor-para-datos-de-expresión.html#comunidad-1"><i class="fa fa-check"></i><b>3.5</b> Comunidad</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datos-de-rna-seq-a-través-de-recount3.html"><a href="datos-de-rna-seq-a-través-de-recount3.html"><i class="fa fa-check"></i><b>4</b> Datos de RNA-seq a través de recount3</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="datos-de-rna-seq-a-través-de-recount3.html"><a href="datos-de-rna-seq-a-través-de-recount3.html#procesar-datos-crudos-fastq-con-speaqeasy"><i class="fa fa-check"></i><b>4.1</b> Procesar datos crudos (FASTQ) con SPEAQeasy</a></li>
+<li class="chapter" data-level="4.2" data-path="datos-de-rna-seq-a-través-de-recount3.html"><a href="datos-de-rna-seq-a-través-de-recount3.html#proyectos-recount"><i class="fa fa-check"></i><b>4.2</b> Proyectos recount</a></li>
+<li class="chapter" data-level="4.3" data-path="datos-de-rna-seq-a-través-de-recount3.html"><a href="datos-de-rna-seq-a-través-de-recount3.html#usar-recount3"><i class="fa fa-check"></i><b>4.3</b> Usar recount3</a></li>
+<li class="chapter" data-level="4.4" data-path="datos-de-rna-seq-a-través-de-recount3.html"><a href="datos-de-rna-seq-a-través-de-recount3.html#ejercicio-1"><i class="fa fa-check"></i><b>4.4</b> Ejercicio</a></li>
+<li class="chapter" data-level="4.5" data-path="datos-de-rna-seq-a-través-de-recount3.html"><a href="datos-de-rna-seq-a-través-de-recount3.html#comunidad-2"><i class="fa fa-check"></i><b>4.5</b> Comunidad</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html"><i class="fa fa-check"></i><b>5</b> Modelos estadísticos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#exploremodelmatrix"><i class="fa fa-check"></i><b>5.1</b> ExploreModelMatrix</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#ejemplo-1"><i class="fa fa-check"></i><b>5.1.1</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="5.1.2" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#ejemplo-2"><i class="fa fa-check"></i><b>5.1.2</b> Ejemplo 2</a></li>
+<li class="chapter" data-level="5.1.3" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#ejemplo-3"><i class="fa fa-check"></i><b>5.1.3</b> Ejemplo 3</a></li>
+<li class="chapter" data-level="5.1.4" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#ejercicio-2"><i class="fa fa-check"></i><b>5.1.4</b> Ejercicio</a></li>
+<li class="chapter" data-level="5.1.5" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#para-aprender-más"><i class="fa fa-check"></i><b>5.1.5</b> Para aprender más</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#datos-de-srp045638"><i class="fa fa-check"></i><b>5.2</b> Datos de SRP045638</a></li>
+<li class="chapter" data-level="5.3" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#normalización-de-datos"><i class="fa fa-check"></i><b>5.3</b> Normalización de datos</a></li>
+<li class="chapter" data-level="5.4" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#expresión-diferencial"><i class="fa fa-check"></i><b>5.4</b> Expresión diferencial</a></li>
+<li class="chapter" data-level="5.5" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#visualizando-genes-de"><i class="fa fa-check"></i><b>5.5</b> Visualizando genes DE</a></li>
+<li class="chapter" data-level="5.6" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#ejercicio-3"><i class="fa fa-check"></i><b>5.6</b> Ejercicio</a></li>
+<li class="chapter" data-level="5.7" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#comunidad-3"><i class="fa fa-check"></i><b>5.7</b> Comunidad</a></li>
+<li class="chapter" data-level="5.8" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#ejercicio-respuesta"><i class="fa fa-check"></i><b>5.8</b> Ejercicio: respuesta</a></li>
+<li class="chapter" data-level="5.9" data-path="modelos-estadísticos.html"><a href="modelos-estadísticos.html#específicaciones-del-proyecto"><i class="fa fa-check"></i><b>5.9</b> Específicaciones del proyecto</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="smokingmouse.html"><a href="smokingmouse.html"><i class="fa fa-check"></i><b>6</b> smokingMouse</a></li>
+<li class="chapter" data-level="7" data-path="revisión.html"><a href="revisión.html"><i class="fa fa-check"></i><b>7</b> Revisión</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="revisión.html"><a href="revisión.html#ejercicio-en-equipo"><i class="fa fa-check"></i><b>7.1</b> Ejercicio en equipo</a></li>
+<li class="chapter" data-level="7.2" data-path="revisión.html"><a href="revisión.html#respuestas"><i class="fa fa-check"></i><b>7.2</b> Respuestas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="rbioconductor-powered-team-data-science.html"><a href="rbioconductor-powered-team-data-science.html"><i class="fa fa-check"></i><b>8</b> R/Bioconductor-powered Team Data Science</a></li>
+<li class="chapter" data-level="9" data-path="spatiallibd.html"><a href="spatiallibd.html"><i class="fa fa-check"></i><b>9</b> spatialLIBD</a></li>
+<li class="chapter" data-level="10" data-path="comunidad-4.html"><a href="comunidad-4.html"><i class="fa fa-check"></i><b>10</b> Comunidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="comunidad-4.html"><a href="comunidad-4.html#de-alumnos-lcg-2021"><i class="fa fa-check"></i><b>10.1</b> De alumnos LCG 2021</a></li>
+<li class="chapter" data-level="10.2" data-path="comunidad-4.html"><a href="comunidad-4.html#de-ustedes"><i class="fa fa-check"></i><b>10.2</b> De ustedes</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro RNA-seq LCG-UNAM 2023</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Intro RNA-seq LCG-UNAM 2023</h1>
+<p class="author"><em>Leonardo Collado-Torres</em></p>
+</div>
+<div id="overview" class="section level1 unnumbered hasAnchor">
+<h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Here you can find the files for the February 2023 introduction to R, RStudio and RNA-sequencing (RNA-seq) course for <a href="https://lcg.unam.mx/">LCG-UNAM</a> at <a href="https://ccg.unam.mx/">CCG-UNAM</a> (January 31 - February 3, 2023). The rest of the chapters will be in Spanish.</p>
+<p>Instructor:</p>
+<ul>
+<li><a href="http://lcolladotor.github.io/"><strong>Leonardo Collado-Torres</strong></a>: <a href="https://lcolladotor.github.io/bioc_team_ds/">team website</a>, <a href="https://twitter.com/lcolladotor">Twitter</a></li>
+</ul>
+<p>Teach assistants:</p>
+<ul>
+<li><a href="https://github.com/valeriamateo">Valeria Erendira Mateo Estrada</a></li>
+</ul>
+<p>Guest presenters:</p>
+<ul>
+<li><a href="https://daianna21.github.io/">Daianna González Padilla</a>, <a href="https://twitter.com/Daianna27635327/">Twitter</a></li>
+</ul>
+<p>Course Coordinators:</p>
+<ul>
+<li>Heladia Salgado</li>
+<li>Julio Collado Vides</li>
+</ul>
+<p>Download the materials for this course with <code>usethis::use_course('lcolladotor/rnaseq_LCG-UNAM_2023')</code> or view online at <a href="http://lcolladotor.github.io/rnaseq_LCG-UNAM_2023"><strong>lcolladotor.github.io/rnaseq_LCG-UNAM_2023</strong></a>.</p>
+<div id="code-of-conduct" class="section level2 unnumbered hasAnchor">
+<h2>Code of Conduct<a href="index.html#code-of-conduct" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ll follow the CDSB code of conduct <a href="https://comunidadbioinfo.github.io/codigo-de-conducta/">comunidadbioinfo.github.io/codigo-de-conducta/</a> as well as version 1.2.0 of the Bioconductor code of conduct <a href="https://bioconductor.github.io/bioc_coc_multilingual/">bioconductor.github.io/bioc_coc_multilingual/</a>.</p>
+<p>For reporting any violations of the code of conduct, report them to the Instructor and/or Course Coordinators.</p>
+</div>
+<div id="course-schedule" class="section level2 unnumbered hasAnchor">
+<h2>Course Schedule<a href="index.html#course-schedule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Local times in Cuernavaca, Mexico</em></p>
+<ul>
+<li>Tuesday January 31:
+<ul>
+<li>9-11 am: introduction to R, RStudio, <em><a href="https://CRAN.R-project.org/package=usethis">usethis</a></em> and <em><a href="https://CRAN.R-project.org/package=here">here</a></em></li>
+<li>12-2 pm: introduction to Bioconductor</li>
+</ul></li>
+<li>Wednesday February 1:
+<ul>
+<li>9-11 am: expression data R/Bioconductor objects and visualization: <em><a href="https://bioconductor.org/packages/3.16/SummarizedExperiment">SummarizedExperiment</a></em> and <em><a href="https://bioconductor.org/packages/3.16/iSEE">iSEE</a></em></li>
+<li>12-2 pm: Downloading RNA-seq data using <em><a href="https://bioconductor.org/packages/3.16/recount3">recount3</a></em></li>
+</ul></li>
+<li>Thursday February 2:
+<ul>
+<li>9-11 am: statistical models with <em><a href="https://bioconductor.org/packages/3.16/ExploreModelMatrix">ExploreModelMatrix</a></em></li>
+<li>11 am-12 pm + 1-2 pm: differential expression analysis with <em><a href="https://bioconductor.org/packages/3.16/limma">limma</a></em></li>
+</ul></li>
+<li>Friday February 3:
+<ul>
+<li>9-11 am: <a href="https://github.com/LieberInstitute/smokingMouse_Indirects">LieberInstitute/smokingMouse_Indirects</a> results + code by <a href="https://daianna21.github.io/">Daianna González Padilla</a>. Looking beyond this course!</li>
+<li>12-2 pm: review + <em>R/Bioconductor-powered Team Data Science</em> overview</li>
+<li>2-2:30 pm: open discussion (career paths, networking, etc)
+<ul>
+<li><a href="https://www.libd.org/summer-internship">2023 LIBD summer internship program</a>: application closes 2/15.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="external-links" class="section level2 unnumbered hasAnchor">
+<h2>External links<a href="index.html#external-links" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://cursos.lcg.unam.mx/course/view.php?id=123">Cursos LCG</a></li>
+<li><a href="https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023">GitHub source code</a></li>
+<li>Zoom (ask)</li>
+<li><a href="http://132.248.220.108:8787/">LCG-UNAM RStudio server</a></li>
+<li><a href="https://comunidadbioinfo.github.io/">CDSB</a>.</li>
+<li><a href="https://comunidadbioinfo.slack.com">Slack CDSB Mexico</a>, in particular the <a href="https://comunidadbioinfo.slack.com/archives/C04LYBTLC22"><code>intro_rnaseq_lcg_2023</code> channel</a>. You can join this Slack workspace through <a href="https://join.slack.com/t/comunidadbioinfo/shared_invite/zt-8lsvpm84-Fne1W0hadk6cpjgJS17Tnw">this link</a>.</li>
+<li><a href="https://github.com/LieberInstitute/template_project">LieberInstitute/template_project</a></li>
+<li>Example real project (by Daianna): <a href="https://github.com/LieberInstitute/smokingMouse_Indirects">LieberInstitute/smokingMouse_Indirects</a></li>
+</ul>
+</div>
+<div id="course-prerequisites" class="section level2 unnumbered hasAnchor">
+<h2>Course Prerequisites<a href="index.html#course-prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Install R 4.2.x from <a href="https://cran.r-project.org/">CRAN</a> then install the following R packages:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For installing Bioconductor packages</span></span>
+<span id="cb1-2"><a href="index.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb1-3"><a href="index.html#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
+<span id="cb1-4"><a href="index.html#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="index.html#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="index.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Install required packages</span></span>
+<span id="cb1-7"><a href="index.html#cb1-7" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(</span>
+<span id="cb1-8"><a href="index.html#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb1-9"><a href="index.html#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;usethis&quot;</span>, <span class="do">## Utilities</span></span>
+<span id="cb1-10"><a href="index.html#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;here&quot;</span>,</span>
+<span id="cb1-11"><a href="index.html#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;biocthis&quot;</span>,</span>
+<span id="cb1-12"><a href="index.html#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;lobstr&quot;</span>,</span>
+<span id="cb1-13"><a href="index.html#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;postcards&quot;</span>,</span>
+<span id="cb1-14"><a href="index.html#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;sessioninfo&quot;</span>,</span>
+<span id="cb1-15"><a href="index.html#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;SummarizedExperiment&quot;</span>, <span class="do">## Main containers / vis</span></span>
+<span id="cb1-16"><a href="index.html#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb1-17"><a href="index.html#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;edgeR&quot;</span>, <span class="do">## RNA-seq</span></span>
+<span id="cb1-18"><a href="index.html#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb1-19"><a href="index.html#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;limma&quot;</span>,</span>
+<span id="cb1-20"><a href="index.html#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;recount3&quot;</span>,</span>
+<span id="cb1-21"><a href="index.html#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;pheatmap&quot;</span>, <span class="do">## Visualization</span></span>
+<span id="cb1-22"><a href="index.html#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;ggplot2&quot;</span>,</span>
+<span id="cb1-23"><a href="index.html#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;patchwork&quot;</span>,</span>
+<span id="cb1-24"><a href="index.html#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;RColorBrewer&quot;</span>,</span>
+<span id="cb1-25"><a href="index.html#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;spatialLIBD&quot;</span> <span class="do">## Advanced</span></span>
+<span id="cb1-26"><a href="index.html#cb1-26" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-27"><a href="index.html#cb1-27" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>You will also need to install <a href="https://rstudio.com/products/rstudio/download/#download">RStudio</a> version 2022.12.0+353 or newer.</p>
+</div>
+<div id="course-evaluation" class="section level2 unnumbered hasAnchor">
+<h2>Course Evaluation<a href="index.html#course-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Participation
+<ul>
+<li>(main evidence) written and/or verbal participation during sessions and break-out rooms</li>
+<li>(optional, strongly encouraged for your own career) Community building: CDSB Slack (introduce yourself), twitter, GitHub, etc.</li>
+</ul></li>
+<li>Public work
+<ul>
+<li>(main evidence) Taking notes on GitHub</li>
+<li>(optional) Deploy an iSEE <code>shiny</code> app on shinyapps.io</li>
+<li>(advanced and optional) R package with notes following <code>usethis::create_package()</code> + <code>biocthis::use_bioc_pkg_templates()</code>.</li>
+</ul></li>
+<li>Final project
+<ul>
+<li>(main evidence) code in a public URL (gist, GitHub, …)</li>
+<li>(optional) a rendered Rmd file (RPubs, GitHub)</li>
+<li>(optional advanced) Copy this repository, remove all the Rmds except the index.Rmd and edit accordingly. GitHub Actions will then help you render it. You’ll need to fetch the <code>gh-pages</code> branch and at least make one commit for the HTML to be available such as this <a href="https://github.com/lcolladotor/rnaseq_LCG-UNAM_2021/commit/e15bd6c234dd0ca4233050a4a0a42184994fef3b">commit</a>.</li>
+</ul></li>
+</ul>
+<p>The final grade will be a weighted average from the evaluation by each TA (15% each), your public work (30%) and your final project (40%).</p>
+<p>Projects, public work and notes are due at 9 am US Eastern on Monday February 13th, though we recommend doing any work related to this course by Friday February 10th.</p>
+</div>
+<div id="r-session-information" class="section level2 unnumbered hasAnchor">
+<h2>R session information<a href="index.html#r-session-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Details on the R version used for making this book. The source code is available at <a href="https://github.com/lcolladotor/rnaseq_LCG-UNAM_2023"><code>lcolladotor/rnaseq_LCG-UNAM_2023</code></a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the package at the top of your script</span></span>
+<span id="cb2-2"><a href="index.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
+<span id="cb2-3"><a href="index.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="index.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  Utilities</span></span>
+<span id="cb2-5"><a href="index.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;BiocStyle&quot;</span>)</span>
+<span id="cb2-6"><a href="index.html#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;biocthis&quot;</span>)</span>
+<span id="cb2-7"><a href="index.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;here&quot;</span>)</span>
+<span id="cb2-8"><a href="index.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;lobstr&quot;</span>)</span>
+<span id="cb2-9"><a href="index.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;postcards&quot;</span>)</span>
+<span id="cb2-10"><a href="index.html#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;usethis&quot;</span>)</span>
+<span id="cb2-11"><a href="index.html#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
+<span id="cb2-12"><a href="index.html#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="index.html#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Main containers / vis</span></span>
+<span id="cb2-14"><a href="index.html#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;SummarizedExperiment&quot;</span>)</span>
+<span id="cb2-15"><a href="index.html#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;iSEE&quot;</span>)</span>
+<span id="cb2-16"><a href="index.html#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="index.html#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="do">## RNA-seq</span></span>
+<span id="cb2-18"><a href="index.html#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;edgeR&quot;</span>)</span>
+<span id="cb2-19"><a href="index.html#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ExploreModelMatrix&quot;</span>)</span>
+<span id="cb2-20"><a href="index.html#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;limma&quot;</span>)</span>
+<span id="cb2-21"><a href="index.html#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;recount3&quot;</span>)</span>
+<span id="cb2-22"><a href="index.html#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="index.html#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="do">## Visualization</span></span>
+<span id="cb2-24"><a href="index.html#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb2-25"><a href="index.html#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;patchwork&quot;</span>)</span>
+<span id="cb2-26"><a href="index.html#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;pheatmap&quot;</span>)</span>
+<span id="cb2-27"><a href="index.html#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;RColorBrewer&quot;</span>)</span>
+<span id="cb2-28"><a href="index.html#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="index.html#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="do">## Advanced</span></span>
+<span id="cb2-30"><a href="index.html#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;spatialLIBD&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Reproducibility information</span></span>
+<span id="cb3-2"><a href="index.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb3-3"><a href="index.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">session_info</span>()</span></code></pre></div>
+<pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value
+##  version  R version 4.2.2 (2022-10-31)
+##  os       macOS Ventura 13.0.1
+##  system   aarch64, darwin20
+##  ui       RStudio
+##  language (EN)
+##  collate  en_US.UTF-8
+##  ctype    en_US.UTF-8
+##  tz       America/Mexico_City
+##  date     2023-01-30
+##  rstudio  2022.12.0+353 Elsbeth Geranium (desktop)
+##  pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package                * version   date (UTC) lib source
+##  AnnotationDbi            1.60.0    2022-11-01 [1] Bioconductor
+##  AnnotationHub            3.6.0     2022-11-01 [1] Bioconductor
+##  assertthat               0.2.1     2019-03-21 [1] CRAN (R 4.2.0)
+##  attempt                  0.3.1     2020-05-03 [1] CRAN (R 4.2.0)
+##  beachmat                 2.14.0    2022-11-01 [1] Bioconductor
+##  beeswarm                 0.4.0     2021-06-01 [1] CRAN (R 4.2.0)
+##  benchmarkme              1.0.8     2022-06-12 [1] CRAN (R 4.2.0)
+##  benchmarkmeData          1.0.4     2020-04-23 [1] CRAN (R 4.2.0)
+##  Biobase                * 2.58.0    2022-11-01 [1] Bioconductor
+##  BiocFileCache            2.6.0     2022-11-01 [1] Bioconductor
+##  BiocGenerics           * 0.44.0    2022-11-01 [1] Bioconductor
+##  BiocIO                   1.8.0     2022-11-01 [1] Bioconductor
+##  BiocManager              1.30.19   2022-10-25 [1] CRAN (R 4.2.0)
+##  BiocNeighbors            1.16.0    2022-11-01 [1] Bioconductor
+##  BiocParallel             1.32.5    2022-12-25 [1] Bioconductor
+##  BiocSingular             1.14.0    2022-11-01 [1] Bioconductor
+##  BiocStyle              * 2.26.0    2022-11-01 [1] Bioconductor
+##  biocthis               * 1.9.1     2022-11-01 [1] Github (lcolladotor/biocthis@af38c7c)
+##  BiocVersion              3.16.0    2022-09-20 [1] Bioconductor
+##  Biostrings               2.66.0    2022-11-01 [1] Bioconductor
+##  bit                      4.0.5     2022-11-15 [1] CRAN (R 4.2.2)
+##  bit64                    4.0.5     2020-08-30 [1] CRAN (R 4.2.0)
+##  bitops                   1.0-7     2021-04-24 [1] CRAN (R 4.2.0)
+##  blob                     1.2.3     2022-04-10 [1] CRAN (R 4.2.0)
+##  bookdown                 0.32      2023-01-17 [1] CRAN (R 4.2.0)
+##  brio                     1.1.3     2021-11-30 [1] CRAN (R 4.2.0)
+##  bslib                    0.4.2     2022-12-16 [1] CRAN (R 4.2.2)
+##  cachem                   1.0.6     2021-08-19 [1] CRAN (R 4.2.0)
+##  callr                    3.7.3     2022-11-02 [1] CRAN (R 4.2.2)
+##  circlize                 0.4.15    2022-05-10 [1] CRAN (R 4.2.0)
+##  cli                      3.6.0     2023-01-09 [1] CRAN (R 4.2.0)
+##  clue                     0.3-63    2022-11-19 [1] CRAN (R 4.2.0)
+##  cluster                  2.1.4     2022-08-22 [1] CRAN (R 4.2.2)
+##  codetools                0.2-18    2020-11-04 [1] CRAN (R 4.2.2)
+##  colorout                 1.2-2     2022-03-01 [1] Github (jalvesaq/colorout@79931fd)
+##  colorspace               2.1-0     2023-01-23 [1] CRAN (R 4.2.0)
+##  colourpicker             1.2.0     2022-10-28 [1] CRAN (R 4.2.0)
+##  ComplexHeatmap           2.14.0    2022-11-01 [1] Bioconductor
+##  config                   0.3.1     2020-12-17 [1] CRAN (R 4.2.0)
+##  cowplot                  1.1.1     2020-12-30 [1] CRAN (R 4.2.0)
+##  crayon                   1.5.2     2022-09-29 [1] CRAN (R 4.2.0)
+##  curl                     5.0.0     2023-01-12 [1] CRAN (R 4.2.0)
+##  data.table               1.14.6    2022-11-16 [1] CRAN (R 4.2.0)
+##  DBI                      1.1.3     2022-06-18 [1] CRAN (R 4.2.0)
+##  dbplyr                   2.3.0     2023-01-16 [1] CRAN (R 4.2.0)
+##  DelayedArray             0.24.0    2022-11-01 [1] Bioconductor
+##  DelayedMatrixStats       1.20.0    2022-11-01 [1] Bioconductor
+##  desc                     1.4.2     2022-09-08 [1] CRAN (R 4.2.0)
+##  devtools               * 2.4.5     2022-10-11 [1] CRAN (R 4.2.0)
+##  digest                   0.6.31    2022-12-11 [1] CRAN (R 4.2.0)
+##  doParallel               1.0.17    2022-02-07 [1] CRAN (R 4.2.0)
+##  dotCall64                1.0-2     2022-10-03 [1] CRAN (R 4.2.1)
+##  dplyr                    1.1.0     2023-01-29 [1] CRAN (R 4.2.0)
+##  dqrng                    0.3.0     2021-05-01 [1] CRAN (R 4.2.0)
+##  DropletUtils             1.18.1    2022-11-23 [1] Bioconductor
+##  DT                       0.27      2023-01-17 [1] CRAN (R 4.2.0)
+##  edgeR                  * 3.40.2    2023-01-22 [1] Bioconductor
+##  ellipsis                 0.3.2     2021-04-29 [1] CRAN (R 4.2.0)
+##  evaluate                 0.20      2023-01-17 [1] CRAN (R 4.2.0)
+##  ExperimentHub            2.6.0     2022-11-01 [1] Bioconductor
+##  ExploreModelMatrix     * 1.10.0    2022-11-01 [1] Bioconductor
+##  fansi                    1.0.4     2023-01-22 [1] CRAN (R 4.2.0)
+##  fastmap                  1.1.0     2021-01-25 [1] CRAN (R 4.2.0)
+##  fields                   14.1      2022-08-12 [1] CRAN (R 4.2.0)
+##  filelock                 1.0.2     2018-10-05 [1] CRAN (R 4.2.0)
+##  foreach                  1.5.2     2022-02-02 [1] CRAN (R 4.2.0)
+##  fs                       1.6.0     2023-01-23 [1] CRAN (R 4.2.0)
+##  generics                 0.1.3     2022-07-05 [1] CRAN (R 4.2.0)
+##  GenomeInfoDb           * 1.34.7    2023-01-18 [1] Bioconductor
+##  GenomeInfoDbData         1.2.9     2022-11-02 [1] Bioconductor
+##  GenomicAlignments        1.34.0    2022-11-01 [1] Bioconductor
+##  GenomicRanges          * 1.50.2    2022-12-18 [1] Bioconductor
+##  GetoptLong               1.0.5     2020-12-15 [1] CRAN (R 4.2.0)
+##  ggbeeswarm               0.7.1     2022-12-16 [1] CRAN (R 4.2.2)
+##  ggplot2                * 3.4.0     2022-11-04 [1] CRAN (R 4.2.0)
+##  ggrepel                  0.9.2     2022-11-06 [1] CRAN (R 4.2.0)
+##  GlobalOptions            0.1.2     2020-06-10 [1] CRAN (R 4.2.0)
+##  glue                     1.6.2     2022-02-24 [1] CRAN (R 4.2.0)
+##  golem                    0.3.5     2022-10-18 [1] CRAN (R 4.2.0)
+##  gridExtra                2.3       2017-09-09 [1] CRAN (R 4.2.0)
+##  gtable                   0.3.1     2022-09-01 [1] CRAN (R 4.2.1)
+##  HDF5Array                1.26.0    2022-11-01 [1] Bioconductor
+##  here                   * 1.0.1     2020-12-13 [1] CRAN (R 4.2.0)
+##  hms                      1.1.2     2022-08-19 [1] CRAN (R 4.2.0)
+##  htmltools                0.5.4     2022-12-07 [1] CRAN (R 4.2.0)
+##  htmlwidgets              1.6.1     2023-01-07 [1] CRAN (R 4.2.0)
+##  httpuv                   1.6.8     2023-01-12 [1] CRAN (R 4.2.0)
+##  httr                     1.4.4     2022-08-17 [1] CRAN (R 4.2.0)
+##  igraph                   1.3.5     2022-09-22 [1] CRAN (R 4.2.0)
+##  interactiveDisplayBase   1.36.0    2022-11-01 [1] Bioconductor
+##  IRanges                * 2.32.0    2022-11-01 [1] Bioconductor
+##  irlba                    2.3.5.1   2022-10-03 [1] CRAN (R 4.2.1)
+##  iSEE                   * 2.10.0    2022-11-01 [1] Bioconductor
+##  iterators                1.0.14    2022-02-05 [1] CRAN (R 4.2.0)
+##  jquerylib                0.1.4     2021-04-26 [1] CRAN (R 4.2.0)
+##  jsonlite                 1.8.4     2022-12-06 [1] CRAN (R 4.2.0)
+##  KEGGREST                 1.38.0    2022-11-01 [1] Bioconductor
+##  knitr                    1.42      2023-01-25 [1] CRAN (R 4.2.0)
+##  later                    1.3.0     2021-08-18 [1] CRAN (R 4.2.0)
+##  lattice                  0.20-45   2021-09-22 [1] CRAN (R 4.2.2)
+##  lazyeval                 0.2.2     2019-03-15 [1] CRAN (R 4.2.0)
+##  lifecycle                1.0.3     2022-10-07 [1] CRAN (R 4.2.1)
+##  limma                  * 3.54.1    2023-01-26 [1] Bioconductor
+##  lobstr                 * 1.1.2     2022-06-22 [1] CRAN (R 4.2.0)
+##  locfit                   1.5-9.7   2023-01-02 [1] CRAN (R 4.2.0)
+##  lubridate                1.9.1     2023-01-24 [1] CRAN (R 4.2.0)
+##  magick                   2.7.3     2021-08-18 [1] CRAN (R 4.2.0)
+##  magrittr                 2.0.3     2022-03-30 [1] CRAN (R 4.2.0)
+##  maps                     3.4.1     2022-10-30 [1] CRAN (R 4.2.0)
+##  MASS                     7.3-58.2  2023-01-23 [1] CRAN (R 4.2.0)
+##  Matrix                   1.5-3     2022-11-11 [1] CRAN (R 4.2.0)
+##  MatrixGenerics         * 1.10.0    2022-11-01 [1] Bioconductor
+##  matrixStats            * 0.63.0    2022-11-18 [1] CRAN (R 4.2.0)
+##  memoise                  2.0.1     2021-11-26 [1] CRAN (R 4.2.0)
+##  mgcv                     1.8-41    2022-10-21 [1] CRAN (R 4.2.2)
+##  mime                     0.12      2021-09-28 [1] CRAN (R 4.2.0)
+##  miniUI                   0.1.1.1   2018-05-18 [1] CRAN (R 4.2.0)
+##  munsell                  0.5.0     2018-06-12 [1] CRAN (R 4.2.0)
+##  nlme                     3.1-161   2022-12-15 [1] CRAN (R 4.2.2)
+##  paletteer                1.5.0     2022-10-19 [1] CRAN (R 4.2.0)
+##  patchwork              * 1.1.2     2022-08-19 [1] CRAN (R 4.2.0)
+##  pheatmap               * 1.0.12    2019-01-04 [1] CRAN (R 4.2.0)
+##  pillar                   1.8.1     2022-08-19 [1] CRAN (R 4.2.0)
+##  pkgbuild                 1.4.0     2022-11-27 [1] CRAN (R 4.2.2)
+##  pkgconfig                2.0.3     2019-09-22 [1] CRAN (R 4.2.0)
+##  pkgload                  1.3.2     2022-11-16 [1] CRAN (R 4.2.2)
+##  plotly                   4.10.1    2022-11-07 [1] CRAN (R 4.2.0)
+##  png                      0.1-8     2022-11-29 [1] CRAN (R 4.2.0)
+##  postcards              * 0.2.3     2022-01-07 [1] CRAN (R 4.2.0)
+##  prettyunits              1.1.1     2020-01-24 [1] CRAN (R 4.2.0)
+##  processx                 3.8.0     2022-10-26 [1] CRAN (R 4.2.0)
+##  profvis                  0.3.7     2020-11-02 [1] CRAN (R 4.2.0)
+##  promises                 1.2.0.1   2021-02-11 [1] CRAN (R 4.2.0)
+##  prompt                   1.0.1     2022-03-01 [1] Github (gaborcsardi/prompt@7ef0f2e)
+##  ps                       1.7.2     2022-10-26 [1] CRAN (R 4.2.0)
+##  purrr                    1.0.1     2023-01-10 [1] CRAN (R 4.2.0)
+##  R.cache                  0.16.0    2022-07-21 [1] CRAN (R 4.2.0)
+##  R.methodsS3              1.8.2     2022-06-13 [1] CRAN (R 4.2.0)
+##  R.oo                     1.25.0    2022-06-12 [1] CRAN (R 4.2.0)
+##  R.utils                  2.12.2    2022-11-11 [1] CRAN (R 4.2.0)
+##  R6                       2.5.1     2021-08-19 [1] CRAN (R 4.2.0)
+##  rappdirs                 0.3.3     2021-01-31 [1] CRAN (R 4.2.0)
+##  RColorBrewer           * 1.1-3     2022-04-03 [1] CRAN (R 4.2.0)
+##  Rcpp                     1.0.10    2023-01-22 [1] CRAN (R 4.2.0)
+##  RCurl                    1.98-1.10 2023-01-27 [1] CRAN (R 4.2.0)
+##  recount3               * 1.8.0     2022-11-01 [1] Bioconductor
+##  rematch2                 2.1.2     2020-05-01 [1] CRAN (R 4.2.0)
+##  remotes                  2.4.2     2021-11-30 [1] CRAN (R 4.2.0)
+##  restfulr                 0.0.15    2022-06-16 [1] CRAN (R 4.2.0)
+##  rhdf5                    2.42.0    2022-11-01 [1] Bioconductor
+##  rhdf5filters             1.10.0    2022-11-01 [1] Bioconductor
+##  Rhdf5lib                 1.20.0    2022-11-01 [1] Bioconductor
+##  rintrojs                 0.3.2     2022-08-09 [1] CRAN (R 4.2.0)
+##  rjson                    0.2.21    2022-01-09 [1] CRAN (R 4.2.0)
+##  rlang                    1.0.6     2022-09-24 [1] CRAN (R 4.2.0)
+##  rmarkdown                2.20      2023-01-19 [1] CRAN (R 4.2.0)
+##  roxygen2                 7.2.3     2022-12-08 [1] CRAN (R 4.2.0)
+##  rprojroot                2.0.3     2022-04-02 [1] CRAN (R 4.2.0)
+##  Rsamtools                2.14.0    2022-11-01 [1] Bioconductor
+##  RSQLite                  2.2.20    2022-12-22 [1] CRAN (R 4.2.2)
+##  rsthemes                 0.3.1     2022-03-01 [1] Github (gadenbuie/rsthemes@bbe73ca)
+##  rstudioapi               0.14      2022-08-22 [1] CRAN (R 4.2.0)
+##  rsvd                     1.0.5     2021-04-16 [1] CRAN (R 4.2.0)
+##  rtracklayer              1.58.0    2022-11-01 [1] Bioconductor
+##  S4Vectors              * 0.36.1    2022-12-07 [1] Bioconductor
+##  sass                     0.4.5     2023-01-24 [1] CRAN (R 4.2.0)
+##  ScaledMatrix             1.6.0     2022-11-01 [1] Bioconductor
+##  scales                   1.2.1     2022-08-20 [1] CRAN (R 4.2.0)
+##  scater                   1.26.1    2022-11-13 [1] Bioconductor
+##  scuttle                  1.8.4     2023-01-22 [1] Bioconductor
+##  sessioninfo            * 1.2.2     2021-12-06 [1] CRAN (R 4.2.0)
+##  shape                    1.4.6     2021-05-19 [1] CRAN (R 4.2.0)
+##  shiny                    1.7.4     2022-12-15 [1] CRAN (R 4.2.2)
+##  shinyAce                 0.4.2     2022-05-06 [1] CRAN (R 4.2.0)
+##  shinydashboard           0.7.2     2021-09-30 [1] CRAN (R 4.2.0)
+##  shinyjs                  2.1.0     2021-12-23 [1] CRAN (R 4.2.0)
+##  shinyWidgets             0.7.6     2023-01-08 [1] CRAN (R 4.2.0)
+##  SingleCellExperiment   * 1.20.0    2022-11-01 [1] Bioconductor
+##  spam                     2.9-1     2022-08-07 [1] CRAN (R 4.2.0)
+##  sparseMatrixStats        1.10.0    2022-11-01 [1] Bioconductor
+##  SpatialExperiment      * 1.8.0     2022-11-01 [1] Bioconductor
+##  spatialLIBD            * 1.11.5    2022-12-22 [1] Github (LieberInstitute/spatialLIBD@bceb64d)
+##  statmod                  1.5.0     2023-01-06 [1] CRAN (R 4.2.0)
+##  stringi                  1.7.12    2023-01-11 [1] CRAN (R 4.2.0)
+##  stringr                  1.5.0     2022-12-02 [1] CRAN (R 4.2.0)
+##  styler                   1.9.0     2023-01-15 [1] CRAN (R 4.2.0)
+##  SummarizedExperiment   * 1.28.0    2022-11-01 [1] Bioconductor
+##  suncalc                  0.5.1     2022-09-29 [1] CRAN (R 4.2.0)
+##  testthat               * 3.1.6     2022-12-09 [1] CRAN (R 4.2.0)
+##  tibble                   3.1.8     2022-07-22 [1] CRAN (R 4.2.1)
+##  tidyr                    1.3.0     2023-01-24 [1] CRAN (R 4.2.0)
+##  tidyselect               1.2.0     2022-10-10 [1] CRAN (R 4.2.0)
+##  timechange               0.2.0     2023-01-11 [1] CRAN (R 4.2.0)
+##  urlchecker               1.0.1     2021-11-30 [1] CRAN (R 4.2.0)
+##  usethis                * 2.1.6     2022-05-25 [1] CRAN (R 4.2.0)
+##  utf8                     1.2.2     2021-07-24 [1] CRAN (R 4.2.0)
+##  vctrs                    0.5.2     2023-01-23 [1] CRAN (R 4.2.0)
+##  vipor                    0.4.5     2017-03-22 [1] CRAN (R 4.2.0)
+##  viridis                  0.6.2     2021-10-13 [1] CRAN (R 4.2.0)
+##  viridisLite              0.4.1     2022-08-22 [1] CRAN (R 4.2.0)
+##  withr                    2.5.0     2022-03-03 [1] CRAN (R 4.2.0)
+##  xfun                     0.36      2022-12-21 [1] CRAN (R 4.2.0)
+##  XML                      3.99-0.13 2022-12-04 [1] CRAN (R 4.2.0)
+##  xml2                     1.3.3     2021-11-30 [1] CRAN (R 4.2.0)
+##  xtable                   1.8-4     2019-04-21 [1] CRAN (R 4.2.0)
+##  XVector                  0.38.0    2022-11-01 [1] Bioconductor
+##  yaml                     2.3.7     2023-01-23 [1] CRAN (R 4.2.0)
+##  zlibbioc                 1.44.0    2022-11-01 [1] Bioconductor
+## 
+##  [1] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library
+## 
+## ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="index.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">proc.time</span>()</span></code></pre></div>
+<pre><code>##    user  system elapsed 
+##  18.286   1.729  53.677</code></pre>
+<p>This book was last updated at 2023-01-30 11:40:47.</p>
+</div>
+<div id="license" class="section level2 unnumbered hasAnchor">
+<h2>License<a href="index.html#license" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+</div>
+<div class="container">
+    <footer class="site-footer">
+
+      <center>
+<p class="powered-by">
+© 2011-2020. All thoughts and opinions here are my own. The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol">Huichol culture</a>; it represents my community building interests.
+</p>
+
+<p class="powered-by copyright-license-text">
+This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+</p>
+
+<p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">
+      <img src="https://search.creativecommons.org/static/img/cc_icon.svg" alt="CC icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-by_icon.svg" alt="CC by icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" alt="CC NC icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" alt="CC SA icon" width="32px">
+    </a>
+</p>
+
+<div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+
+<p class="powered-by">
+Published with <a href="https://bookdown.org/" target="_blank" rel="noopener">Bookdown</a>
+</p>
+
+</center>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45299226-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-45299226-1');
+</script>
+
+</footer>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introducción-a-r-y-rstudio.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
