@@ -58,8 +58,9 @@ _Local times in Cuernavaca, Mexico_
   - 9-11 am: statistical models with `r BiocStyle::Biocpkg("ExploreModelMatrix")`
   - 12-2 pm: differential expression analysis with `r BiocStyle::Biocpkg("limma")`
 * Friday February 3:
-  - 9-12 am: Review session + spatial transcriptomics with `r BiocStyle::Biocpkg("spatialLIBD")`
-  - 1-2 pm: open discussion (career paths, networking, etc)
+  - 9-11 am: [LieberInstitute/smokingMouse_Indirects](https://github.com/LieberInstitute/smokingMouse_Indirects) results + code by [Daianna González Padilla](https://daianna21.github.io/). Looking beyond this course!
+  - 12-2 pm: _R/Bioconductor-powered Team Data Science_ overview + open discussion (career paths, networking, etc)
+    - [2023 LIBD summer internship program](https://www.libd.org/summer-internship): application closes 2/15.
   
 ## External links {-}
 
