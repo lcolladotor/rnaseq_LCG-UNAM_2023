@@ -198,7 +198,7 @@ usethis::use_github()
 
 Resultado ejemplo: https://github.com/lcolladotor/rnaseq_2021_notas. El que hice en vivo está disponible vía https://github.com/lcolladotor/rnaseq_2023_notas_en_vivo.
 
-Una vez que termines, agrega la liga al repositorio con tus notas del curso en el [la página del curso](https://cursos.lcg.unam.mx/course/view.php?id=123#section-3).
+Una vez que termines, agrega la liga al repositorio con tus notas del curso en el [la página del curso](https://cursos.lcg.unam.mx/course/view.php?id=161#section-3).
 
 ## Material del curso
 
