@@ -78,8 +78,8 @@ options(repos = c(CRAN = "https://cloud.r-project.org"))
 ```
 
 * Es actualizado con bastante frecuencia
-* RStudio cheatsheets https://www.rstudio.com/resources/cheatsheets/
-  - https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf
+* RStudio cheatsheets https://posit.co/resources/cheatsheets/
+  - https://posit.co/wp-content/uploads/2022/10/rstudio-ide-1.pdf
 * RStudio projects: usalos para organizar tu código
   - https://github.com/ComunidadBioInfo/cdsb2020/blob/master/presentaciones_flujos-de-trabajo/Trabajando-con-proyectos.pdf
 
