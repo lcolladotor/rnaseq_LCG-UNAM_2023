@@ -68,7 +68,7 @@ Bioconductor, the R package repository for the “analysis and comprehension of 
 * Bioconductor tiene es actualizado cada 6 meses (abril y octubre). R lo actualizan 1 vez al año (abril).
 * Todo el software lo prueban en macOS, Windows y linux
     - Ejemplo: http://bioconductor.org/checkResults/release/bioc-LATEST/recount/ y http://bioconductor.org/checkResults/devel/bioc-LATEST/recount/
-* Resumen BioC 3.14 http://bioconductor.org/news/bioc_3_14_release/
+* Resumen BioC 3.16 http://bioconductor.org/news/bioc_3_16_release/
     - Blog post en LIBD rstats club: Quick overview on the new Bioconductor 3.8 release http://research.libd.org/rstatsclub/2018/11/02/quick-overview-on-the-new-bioconductor-3-8-release/
 
 
