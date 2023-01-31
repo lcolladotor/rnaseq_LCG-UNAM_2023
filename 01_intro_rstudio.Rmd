@@ -139,6 +139,8 @@ También hay videos en el [canal de YouTube de la CDSB](https://www.youtube.com/
 
 * Para una guía más detallada de cómo organizar tus archivos, revisa https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#.YflDV-rMJD8. En particular, [LieberInstitute/template_project](https://github.com/LieberInstitute/template_project).
 
+* Acá está la guía de mi equipo de configuración de R: https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-setup.
+
 * Configura `usethis` con GitHub vía https://usethis.r-lib.org/articles/articles/git-credentials.html
 
 ```{r use_git_init, eval = FALSE}
