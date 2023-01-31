@@ -90,7 +90,7 @@ Bioconductor, the R package repository for the “analysis and comprehension of 
 * Slack: https://bioc-community.herokuapp.com/
 * Sitio web de ayuda: https://support.bioconductor.org/
     - Usa la(s) etiqueta(s) adecuada(s) para que lxs autores de los paquetes reciban email de forma automática
-    - Ejemplo: https://support.bioconductor.org/t/recount/
+    - Ejemplo: https://support.bioconductor.org/tag/recount/
     - Pueden revisar ese sitio web y usarlo para aprender cómo en https://lcolladotor.github.io/bioc_team_ds/helping-others.html#bioconductor-support-practice-grounds
 * Twitter: https://twitter.com/bioconductor
   
