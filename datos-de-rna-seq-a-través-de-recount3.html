@@ -302,11 +302,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [1] &quot;https://recount-opendata.s3.amazonaws.com/recount3/release&quot;</code></pre>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Revisemos todos los proyectos con datos de humano en recount3</span></span>
 <span id="cb60-2"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb60-2" aria-hidden="true" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span></code></pre></div>
-<pre><code>## 2023-02-01 19:12:28 caching file sra.recount_project.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:29 caching file sra.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/sra.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:30 caching file gtex.recount_project.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:30 caching file gtex.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/gtex/metadata/gtex.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:31 caching file tcga.recount_project.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:31 caching file tcga.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/tcga/metadata/tcga.recount_project.MD.gz&#39;</code></pre>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Encuentra tu proyecto de interés. Aquí usaremos</span></span>
 <span id="cb67-2"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="do">## SRP009615 de ejemplo</span></span>
@@ -314,27 +314,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb67-4"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-4" aria-hidden="true" tabindex="-1"></a>    human_projects,</span>
 <span id="cb67-5"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-5" aria-hidden="true" tabindex="-1"></a>    project <span class="sc">==</span> <span class="st">&quot;SRP009615&quot;</span> <span class="sc">&amp;</span> project_type <span class="sc">==</span> <span class="st">&quot;data_sources&quot;</span></span>
 <span id="cb67-6"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb67-7"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Crea un objetio de tipo RangedSummarizedExperiment (RSE)</span></span>
+<span id="cb67-7"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Crea un objeto de tipo RangedSummarizedExperiment (RSE)</span></span>
 <span id="cb67-8"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="do">## con la información a nivel de genes</span></span>
 <span id="cb67-9"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb67-9" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info)</span></code></pre></div>
-<pre><code>## 2023-02-01 19:12:40 downloading and reading the metadata.</code></pre>
-<pre><code>## 2023-02-01 19:12:40 caching file sra.sra.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:38 downloading and reading the metadata.</code></pre>
+<pre><code>## 2023-02-01 20:22:39 caching file sra.sra.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/15/SRP009615/sra.sra.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:41 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:40 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/15/SRP009615/sra.recount_project.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:42 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:40 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/15/SRP009615/sra.recount_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:43 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:41 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/15/SRP009615/sra.recount_seq_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:44 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:41 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/15/SRP009615/sra.recount_pred.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:45 downloading and reading the feature information.</code></pre>
-<pre><code>## 2023-02-01 19:12:45 caching file human.gene_sums.G026.gtf.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:42 downloading and reading the feature information.</code></pre>
+<pre><code>## 2023-02-01 20:22:42 caching file human.gene_sums.G026.gtf.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/annotations/gene_sums/human.gene_sums.G026.gtf.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:47 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
-<pre><code>## 2023-02-01 19:12:47 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
+<pre><code>## 2023-02-01 20:22:43 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
+<pre><code>## 2023-02-01 20:22:44 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/gene_sums/15/SRP009615/sra.gene_sums.SRP009615.G026.gz&#39;</code></pre>
-<pre><code>## 2023-02-01 19:12:48 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
+<pre><code>## 2023-02-01 20:22:44 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Explora el objeto RSE</span></span>
 <span id="cb86-2"><a href="datos-de-rna-seq-a-través-de-recount3.html#cb86-2" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615</span></code></pre></div>
 <pre><code>## class: RangedSummarizedExperiment 
@@ -395,7 +395,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Utiliza información de las columnas para el eje X</li>
 <li>Utiliza información de las columnas para los colores</li>
 </ul></li>
-<li>(opcional) Crea tu cuenta gratis de <a href="https://www.shinyapps.io/" class="uri">https://www.shinyapps.io/</a> y comparte tu visualización de los datos usando <code>iSEE</code> de esa forma. Ejemplos reales: <a href="https://github.com/LieberInstitute/10xPilot_snRNAseq-human#explore-the-data-interactively" class="uri">https://github.com/LieberInstitute/10xPilot_snRNAseq-human#explore-the-data-interactively</a>.</li>
+<li>(opcional) Crea tu cuenta gratis de <a href="https://www.shinyapps.io/" class="uri">https://www.shinyapps.io/</a> y comparte tu visualización de los datos usando <code>iSEE</code> de esa forma. Ejemplos reales: <a href="https://github.com/LieberInstitute/10xPilot_snRNAseq-human#explore-the-data-interactively" class="uri">https://github.com/LieberInstitute/10xPilot_snRNAseq-human#explore-the-data-interactively</a>. Ejemplo: <a href="https://libd.shinyapps.io/SRP009615/" class="uri">https://libd.shinyapps.io/SRP009615/</a> creado con <a href="https://github.com/lcolladotor/rnaseq_2023_notas_en_vivo/blob/main/app.R" class="uri">https://github.com/lcolladotor/rnaseq_2023_notas_en_vivo/blob/main/app.R</a>.</li>
 </ul>
 </div>
 <div id="comunidad-2" class="section level2 hasAnchor" number="4.5">
