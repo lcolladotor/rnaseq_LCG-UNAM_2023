@@ -376,32 +376,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb102-3"><a href="modelos-estadísticos.html#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">recount3_url =</span> <span class="st">&quot;https://recount-opendata.s3.amazonaws.com/recount3/release&quot;</span>)</span>
 <span id="cb102-4"><a href="modelos-estadísticos.html#cb102-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb102-5"><a href="modelos-estadísticos.html#cb102-5" aria-hidden="true" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span></code></pre></div>
-<pre><code>## 2023-02-02 23:04:49 caching file sra.recount_project.MD.gz.</code></pre>
-<pre><code>## 2023-02-02 23:04:49 caching file gtex.recount_project.MD.gz.</code></pre>
-<pre><code>## 2023-02-02 23:04:50 caching file tcga.recount_project.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:14 caching file sra.recount_project.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:14 caching file gtex.recount_project.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:15 caching file tcga.recount_project.MD.gz.</code></pre>
 <div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="modelos-estadísticos.html#cb106-1" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP045638 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(</span>
 <span id="cb106-2"><a href="modelos-estadísticos.html#cb106-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">subset</span>(</span>
 <span id="cb106-3"><a href="modelos-estadísticos.html#cb106-3" aria-hidden="true" tabindex="-1"></a>        human_projects,</span>
 <span id="cb106-4"><a href="modelos-estadísticos.html#cb106-4" aria-hidden="true" tabindex="-1"></a>        project <span class="sc">==</span> <span class="st">&quot;SRP045638&quot;</span> <span class="sc">&amp;</span> project_type <span class="sc">==</span> <span class="st">&quot;data_sources&quot;</span></span>
 <span id="cb106-5"><a href="modelos-estadísticos.html#cb106-5" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb106-6"><a href="modelos-estadísticos.html#cb106-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## 2023-02-02 23:04:54 downloading and reading the metadata.</code></pre>
-<pre><code>## 2023-02-02 23:04:55 caching file sra.sra.SRP045638.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:18 downloading and reading the metadata.</code></pre>
+<pre><code>## 2023-02-02 23:26:18 caching file sra.sra.SRP045638.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/38/SRP045638/sra.sra.SRP045638.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-02 23:04:56 caching file sra.recount_project.SRP045638.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:19 caching file sra.recount_project.SRP045638.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/38/SRP045638/sra.recount_project.SRP045638.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-02 23:04:57 caching file sra.recount_qc.SRP045638.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:19 caching file sra.recount_qc.SRP045638.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/38/SRP045638/sra.recount_qc.SRP045638.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-02 23:04:57 caching file sra.recount_seq_qc.SRP045638.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:20 caching file sra.recount_seq_qc.SRP045638.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/38/SRP045638/sra.recount_seq_qc.SRP045638.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-02 23:04:58 caching file sra.recount_pred.SRP045638.MD.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:20 caching file sra.recount_pred.SRP045638.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/metadata/38/SRP045638/sra.recount_pred.SRP045638.MD.gz&#39;</code></pre>
-<pre><code>## 2023-02-02 23:04:59 downloading and reading the feature information.</code></pre>
-<pre><code>## 2023-02-02 23:04:59 caching file human.gene_sums.G026.gtf.gz.</code></pre>
-<pre><code>## 2023-02-02 23:05:00 downloading and reading the counts: 66 samples across 63856 features.</code></pre>
-<pre><code>## 2023-02-02 23:05:00 caching file sra.gene_sums.SRP045638.G026.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:21 downloading and reading the feature information.</code></pre>
+<pre><code>## 2023-02-02 23:26:21 caching file human.gene_sums.G026.gtf.gz.</code></pre>
+<pre><code>## 2023-02-02 23:26:22 downloading and reading the counts: 66 samples across 63856 features.</code></pre>
+<pre><code>## 2023-02-02 23:26:22 caching file sra.gene_sums.SRP045638.G026.gz.</code></pre>
 <pre><code>## adding rname &#39;https://recount-opendata.s3.amazonaws.com/recount3/release/human/data_sources/sra/gene_sums/38/SRP045638/sra.gene_sums.SRP045638.G026.gz&#39;</code></pre>
-<pre><code>## 2023-02-02 23:05:02 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
+<pre><code>## 2023-02-02 23:26:23 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
 <div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="modelos-estadísticos.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">assay</span>(rse_gene_SRP045638, <span class="st">&quot;counts&quot;</span>) <span class="ot">&lt;-</span> <span class="fu">compute_read_counts</span>(rse_gene_SRP045638)</span></code></pre></div>
 <p>Una vez descargados y con los números de lecturas podemos usar <code>expand_sra_attributes()</code>. Sin embargo, tenemos un problema con estos datos.</p>
 <div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="modelos-estadísticos.html#cb125-1" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP045638<span class="sc">$</span>sra.sample_attributes[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
@@ -801,6 +801,27 @@ If you've ever been dazed by design matrices or confused by contrasts when perfo
 <h2><span class="header-section-number">5.9</span> Sobre <em>centering</em> y <em>scaling</em> en heatmaps<a href="modelos-estadísticos.html#sobre-centering-y-scaling-en-heatmaps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/c8ffeFVUzk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 </iframe>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="modelos-estadísticos.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Versión con centering y scaling en los renglones (los genes)</span></span>
+<span id="cb186-2"><a href="modelos-estadísticos.html#cb186-2" aria-hidden="true" tabindex="-1"></a>pheatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
+<span id="cb186-3"><a href="modelos-estadísticos.html#cb186-3" aria-hidden="true" tabindex="-1"></a>    exprs_heatmap,</span>
+<span id="cb186-4"><a href="modelos-estadísticos.html#cb186-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cluster_rows =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb186-5"><a href="modelos-estadísticos.html#cb186-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">cluster_cols =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb186-6"><a href="modelos-estadísticos.html#cb186-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">show_rownames =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb186-7"><a href="modelos-estadísticos.html#cb186-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">show_colnames =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb186-8"><a href="modelos-estadísticos.html#cb186-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">annotation_col =</span> df,</span>
+<span id="cb186-9"><a href="modelos-estadísticos.html#cb186-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="st">&quot;row&quot;</span></span>
+<span id="cb186-10"><a href="modelos-estadísticos.html#cb186-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/centering_and_scaling-1.png" width="672" /></p>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="modelos-estadísticos.html#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Misma versión pero ahora con ComplexHeatmap en vez del paquete pheatmap</span></span>
+<span id="cb187-2"><a href="modelos-estadísticos.html#cb187-2" aria-hidden="true" tabindex="-1"></a>ComplexHeatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
+<span id="cb187-3"><a href="modelos-estadísticos.html#cb187-3" aria-hidden="true" tabindex="-1"></a>    exprs_heatmap,</span>
+<span id="cb187-4"><a href="modelos-estadísticos.html#cb187-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cluster_rows =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb187-5"><a href="modelos-estadísticos.html#cb187-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">cluster_cols =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb187-6"><a href="modelos-estadísticos.html#cb187-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">show_rownames =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb187-7"><a href="modelos-estadísticos.html#cb187-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">show_colnames =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb187-8"><a href="modelos-estadísticos.html#cb187-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">annotation_col =</span> df,</span>
+<span id="cb187-9"><a href="modelos-estadísticos.html#cb187-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale =</span> <span class="st">&quot;row&quot;</span></span>
+<span id="cb187-10"><a href="modelos-estadísticos.html#cb187-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 </div>
 <div id="específicaciones-del-proyecto" class="section level2 hasAnchor" number="5.10">
 <h2><span class="header-section-number">5.10</span> Específicaciones del proyecto<a href="modelos-estadísticos.html#específicaciones-del-proyecto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
