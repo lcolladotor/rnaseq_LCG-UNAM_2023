@@ -17,6 +17,7 @@ Imports:
     BiocStyle,
     biocthis,
     bookdown,
+    ComplexHeatmap,
     edgeR,
     ExploreModelMatrix,
     ggplot2,

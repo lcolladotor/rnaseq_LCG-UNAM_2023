@@ -1,4 +1,4 @@
-## ----install, eval = FALSE----
+## ----install, eval = FALSE--------------------------------------------------------------------------
 ## ## For installing Bioconductor packages
 ## if (!requireNamespace("BiocManager", quietly = TRUE)) {
 ##     install.packages("BiocManager")
@@ -23,12 +23,13 @@
 ##         "ggplot2",
 ##         "patchwork",
 ##         "RColorBrewer",
+##         "ComplexHeatmap",
 ##         "spatialLIBD" ## Advanced
 ##     )
 ## )
 
 
-## ----session_packages, eval = TRUE, message = FALSE----
+## ----session_packages, eval = TRUE, message = FALSE-------------------------------------------------
 ## Load the package at the top of your script
 library("sessioninfo")
 
@@ -52,6 +53,7 @@ library("limma")
 library("recount3")
 
 ## Visualization
+library("ComplexHeatmap")
 library("ggplot2")
 library("patchwork")
 library("pheatmap")
@@ -61,7 +63,7 @@ library("RColorBrewer")
 library("spatialLIBD")
 
 
-## ----session_info-----------
+## ----session_info-----------------------------------------------------------------------------------
 ## Reproducibility information
 options(width = 120)
 session_info()

@@ -106,6 +106,7 @@ BiocManager::install(
         "ggplot2",
         "patchwork",
         "RColorBrewer",
+        "ComplexHeatmap",
         "spatialLIBD" ## Advanced
     )
 )
@@ -159,6 +160,7 @@ library("limma")
 library("recount3")
 
 ## Visualization
+library("ComplexHeatmap")
 library("ggplot2")
 library("patchwork")
 library("pheatmap")
