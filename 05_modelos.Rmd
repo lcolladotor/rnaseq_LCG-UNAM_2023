@@ -171,6 +171,11 @@ rse_gene_SRP045638 <- rse_gene_SRP045638[, rse_gene_SRP045638$assigned_gene_prop
 ## muestras.
 ## Ojo: en un análisis real probablemente haríamos esto con los RPKMs o CPMs
 ## en vez de las cuentas.
+## En realidad usariamos:
+# edgeR::filterByExpr() https://bioconductor.org/packages/edgeR/ https://rdrr.io/bioc/edgeR/man/filterByExpr.html
+# genefilter::genefilter() https://bioconductor.org/packages/genefilter/ https://rdrr.io/bioc/genefilter/man/genefilter.html
+# jaffelab::expression_cutoff() http://research.libd.org/jaffelab/reference/expression_cutoff.html
+#
 gene_means <- rowMeans(assay(rse_gene_SRP045638, "counts"))
 summary(gene_means)
 
