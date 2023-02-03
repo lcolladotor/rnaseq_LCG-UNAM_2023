@@ -402,7 +402,7 @@ dev.off()
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/c8ffeFVUzk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-```{r "centering_and_scaling"}
+```{r "centered_and_scaled", out.height="1100px"}
 ## Versión con centering y scaling en los renglones (los genes)
 pheatmap::pheatmap(
     exprs_heatmap,
@@ -413,7 +413,11 @@ pheatmap::pheatmap(
     annotation_col = df,
     scale = "row"
 )
+```
 
+También podemos hacer una versión con `ComplexHeatmap` https://bioconductor.org/packages/ComplexHeatmap/.
+
+```{r "complexheatmap", out.height="1100px"}
 ## Misma versión pero ahora con ComplexHeatmap en vez del paquete pheatmap
 ComplexHeatmap::pheatmap(
     exprs_heatmap,
@@ -425,6 +429,7 @@ ComplexHeatmap::pheatmap(
     scale = "row"
 )
 ```
+
 
 ## Específicaciones del proyecto
 
